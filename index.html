@@ -22,19 +22,16 @@
       text-align: center;
     }
     #navbar a {
-      color: black;
+      color: white;
       text-decoration: none;
       margin: 0 10px;
       font-size: 18px;
       display: inline-block;
       padding: 8px 16px;
       border-radius: 20px;
-      background-color: white;
-      transition: background-color 0.3s ease-in-out;
     }
     #navbar a:hover {
       background-color: black;
-      color: white;
     }
     #content {
       padding: 40px;
@@ -47,24 +44,33 @@
       margin-bottom: 20px;
     }
     .button-container {
-      display: flex;
-      flex-wrap: wrap;
-      justify-content: center;
+      display: grid;
+      grid-template-columns: repeat(5, 1fr);
+      grid-gap: 10px;
+      justify-items: center;
+      align-items: center;
     }
     .button {
-      color: black;
+      color: white;
       text-decoration: none;
-      margin: 10px;
+      margin: 0;
       font-size: 18px;
       display: inline-block;
       padding: 8px 16px;
       border-radius: 20px;
-      background-color: white;
+      background-color: purple;
       transition: background-color 0.3s ease-in-out;
     }
     .button:hover {
       background-color: black;
+    }
+    #footer {
+      background-color: purple;
+      padding: 10px;
+      text-align: center;
       color: white;
+      font-size: 14px;
+      margin-top: auto;
     }
   </style>
 </head>
@@ -74,24 +80,54 @@
     <a href="about:blank" target="_blank">Resources</a>
     <a href="https://github.com/SCbyUB" target="_blank">Support</a>
     <a href="about:blank" target="_blank">Credits</a>
-    <a href="javascript:void(0)" onclick="openEggBoy()">School Zone</a>
+    <a href="javascript:void(0)" onclick="openSchoolZone()">School Zone</a>
   </div>
   <div id="content">
     <h1>Activities</h1>
     <div class="divider"></div>
     <div class="button-container">
-      <?php
-      for ($i = 1; $i <= 30; $i++) {
-        echo '<a class="button" href="about:blank" target="_blank">Button number: '.$i.'</a>';
-      }
-      ?>
+      <a class="button" href="about:blank" target="_blank" onclick="openIframe('https://1v1.lol')">1v1.lol</a>
+      <a class="button" href="about:blank" target="_blank" onclick="openIframe('https://eggboy.xyz')">eggboy.xyz</a>
+      <a class="button" href="about:blank" target="_blank" onclick="openIframe('https://oncoursemail.github.io/eaglercraft/1.8.html')">Minecraft</a>
+      <a class="button" href="about:blank" target="_blank" onclick="openIframe('')">Button 4</a>
+      <a class="button" href="about:blank" target="_blank" onclick="openIframe('')">Button 5</a>
+      <a class="button" href="about:blank" target="_blank" onclick="openIframe('')">Button 6</a>
+      <a class="button" href="about:blank" target="_blank" onclick="openIframe('')">Button 7</a>
+      <a class="button" href="about:blank" target="_blank" onclick="openIframe('')">Button 8</a>
+      <a class="button" href="about:blank" target="_blank" onclick="openIframe('')">Button 9</a>
+      <a class="button" href="about:blank" target="_blank" onclick="openIframe('')">Button 10</a>
+      <a class="button" href="about:blank" target="_blank" onclick="openIframe('')">Button 11</a>
+      <a class="button" href="about:blank" target="_blank" onclick="openIframe('')">Button 12</a>
+      <a class="button" href="about:blank" target="_blank" onclick="openIframe('')">Button 13</a>
+      <a class="button" href="about:blank" target="_blank" onclick="openIframe('')">Button 14</a>
+      <a class="button" href="about:blank" target="_blank" onclick="openIframe('')">Button 15</a>
+      <a class="button" href="about:blank" target="_blank" onclick="openIframe('')">Button 16</a>
+      <a class="button" href="about:blank" target="_blank" onclick="openIframe('')">Button 17</a>
+      <a class="button" href="about:blank" target="_blank" onclick="openIframe('')">Button 18</a>
+      <a class="button" href="about:blank" target="_blank" onclick="openIframe('')">Button 19</a>
+      <a class="button" href="about:blank" target="_blank" onclick="openIframe('')">Button 20</a>
+      <a class="button" href="about:blank" target="_blank" onclick="openIframe('')">Button 21</a>
+      <a class="button" href="about:blank" target="_blank" onclick="openIframe('')">Button 22</a>
+      <a class="button" href="about:blank" target="_blank" onclick="openIframe('')">Button 23</a>
+      <a class="button" href="about:blank" target="_blank" onclick="openIframe('')">Button 24</a>
+      <a class="button" href="about:blank" target="_blank" onclick="openIframe('')">Button 25</a>
+      <a class="button" href="about:blank" target="_blank" onclick="openIframe('')">Button 26</a>
+      <a class="button" href="about:blank" target="_blank" onclick="openIframe('')">Button 27</a>
+      <a class="button" href="about:blank" target="_blank" onclick="openIframe('')">Button 28</a>
+      <a class="button" href="about:blank" target="_blank" onclick="openIframe('')">Button 29</a>
+      <a class="button" href="about:blank" target="_blank" onclick="openIframe('')">Button 30</a>
     </div>
   </div>
   <div id="footer">
     <p>Made by Zane Campbell and the UnblockMania team</p>
   </div>
   <script>
-    function openEggBoy() {
+    function openIframe(url) {
+      var newTab = window.open("about:blank");
+      newTab.document.write('<iframe src="' + url + '" style="width: 100%; height: 100%; border: none;"></iframe>');
+    }
+
+    function openSchoolZone() {
       var newTab = window.open("about:blank");
       newTab.document.write('<iframe src="https://eggboy.xyz" style="width: 100%; height: 100%; border: none;"></iframe>');
     }
